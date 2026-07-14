@@ -243,6 +243,8 @@ input[type="number"] {
 
 .result-card.error { border-left-color: var(--error); }
 .result-card.skipped { border-left-color: #d99a4e; }
+.result-card.pending { border-left-color: var(--accent); }
+.result-card.pending .result-text { color: var(--muted); }
 
 .result-header {
   display: flex;

@@ -1,0 +1,8 @@
+# Konfigurace Netlify deploymentu
+[build]
+  publish = "public"
+
+[functions]
+  node_bundler = "esbuild"
+  # Sharp má nativní binárky – nesmí se bundlovat, balí se celý modul
+  external_node_modules = ["sharp"]
