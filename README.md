@@ -22,7 +22,7 @@ Nástupce aplikace **vidaprompty** (ta volala OpenAI, Anthropic a Google napří
 | Claude Opus 4.8 | Anthropic | přemýšlející |
 | Gemini 3.5 Flash | Google | rychlý |
 | Gemini 3.1 Pro | Google | přemýšlející |
-| Grok 4.5 | xAI | novinka |
+| Grok 4.3 | xAI | aktuální (4.5 není dostupný v EU) |
 | Mistral Medium 3.5 | Mistral | evropský |
 | DeepSeek V4 Pro | DeepSeek | čínský, bez obrázků |
 | Kimi K2.6 | Moonshot AI | čínský |
