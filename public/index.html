@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promptovač – testování AI modelů</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🧪 Promptovač</h1>
+    <p class="subtitle">Otestuj jeden prompt na 12 AI modelech přes OpenRouter</p>
+  </header>
+
+  <main>
+    <!-- Formulář s promptem -->
+    <section class="card">
+      <label for="prompt" class="section-title">Prompt</label>
+      <textarea id="prompt" rows="4" placeholder="Napiš prompt, který chceš otestovat…"></textarea>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="image" class="section-title">Obrázek (volitelné)</label>
+          <input type="file" id="image" accept=".jpg,.jpeg,.png,.heic,image/*">
+          <div id="image-preview" class="image-preview hidden">
+            <img id="preview-img" alt="Náhled obrázku">
+            <button type="button" id="remove-image" title="Odebrat obrázek">✕</button>
+          </div>
+          <p class="hint">JPG, PNG i HEIC z iPhonu. Modely bez podpory obrázků se přeskočí.</p>
+        </div>
+        <div class="form-group narrow">
+          <label for="count" class="section-title">Počet odpovědí</label>
+          <input type="number" id="count" min="1" max="50" value="1">
+          <p class="hint">Kolikrát se má každý model zeptat (1–50)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Výběr modelů -->
+    <section class="card">
+      <div class="models-header">
+        <span class="section-title">Modely</span>
+        <button type="button" id="toggle-all" class="link-btn">Vybrat vše</button>
+      </div>
+      <div id="models" class="models-grid">
+        <p class="hint">Načítám seznam modelů…</p>
+      </div>
+    </section>
+
+    <!-- Spuštění -->
+    <section class="actions">
+      <button id="run" class="primary-btn">▶ Spustit test</button>
+      <button id="export" class="secondary-btn hidden">📊 Stáhnout Excel</button>
+      <div id="progress" class="progress hidden">
+        <div id="progress-bar"></div>
+        <span id="progress-text"></span>
+      </div>
+    </section>
+
+    <!-- Výsledky -->
+    <section id="results" class="results"></section>
+  </main>
+
+  <footer>
+    <p>Promptovač · pohání <a href="https://openrouter.ai" target="_blank" rel="noopener">OpenRouter</a></p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
