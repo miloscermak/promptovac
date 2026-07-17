@@ -25,7 +25,7 @@ Nástupce aplikace **vidaprompty** (ta volala OpenAI, Anthropic a Google napří
 | Grok 4.3 | xAI | aktuální (4.5 není dostupný v EU) |
 | Mistral Medium 3.5 | Mistral | evropský |
 | DeepSeek V4 Pro | DeepSeek | čínský, bez obrázků |
-| Kimi K2.6 | Moonshot AI | čínský |
+| Kimi K3 | Moonshot AI | čínský |
 | GPT-OSS 20B | OpenAI (open-source) | lokální, bez obrázků |
 | Qwen 3.5 9B | Alibaba (open-source) | lokální |
 

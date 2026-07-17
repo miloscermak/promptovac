@@ -11,7 +11,7 @@ export const MODELS = [
   { id: 'x-ai/grok-4.3', name: 'Grok 4.3', provider: 'xAI', tag: 'xAI', vision: true, description: 'Aktuální model od xAI dostupný v Evropě' },
   { id: 'mistralai/mistral-medium-3-5', name: 'Mistral Medium 3.5', provider: 'Mistral', tag: 'evropský', vision: true, description: 'Aktuální střední model od Mistralu' },
   { id: 'deepseek/deepseek-v4-pro', name: 'DeepSeek V4 Pro', provider: 'DeepSeek', tag: 'čínský', vision: false, description: 'Silný čínský model za zlomek ceny' },
-  { id: 'moonshotai/kimi-k2.6', name: 'Kimi K2.6', provider: 'Moonshot AI', tag: 'čínský', vision: true, description: 'Čínský multimodální model' },
+  { id: 'moonshotai/kimi-k3', name: 'Kimi K3', provider: 'Moonshot AI', tag: 'čínský', vision: true, description: 'Nejnovější vlajkový model Moonshot AI' },
   { id: 'openai/gpt-oss-20b', name: 'GPT-OSS 20B', provider: 'OpenAI (open-source)', tag: 'lokální', vision: false, description: 'Open-source model, jde provozovat lokálně' },
   { id: 'qwen/qwen3.5-9b', name: 'Qwen 3.5 9B', provider: 'Alibaba (open-source)', tag: 'lokální', vision: true, description: 'Malý open-source model s podporou obrázků' }
 ];
