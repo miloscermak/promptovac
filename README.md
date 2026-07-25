@@ -6,7 +6,7 @@ Nástupce aplikace **vidaprompty** (ta volala OpenAI, Anthropic a Google napří
 
 ## Funkce
 
-- 🎯 12 modelů od 8 providerů, výběr checkboxy
+- 🎯 15 modelů od 10 providerů, výběr checkboxy
 - 🔄 1–50 odpovědí od každého modelu (pro testování konzistence)
 - 📷 Podpora obrázků (JPG, PNG, HEIC z iPhonu – automatická konverze, max ~6 MB)
 - ⚡ Odpovědi se streamují živě, jak je modely píší, s měřením času
@@ -19,13 +19,16 @@ Nástupce aplikace **vidaprompty** (ta volala OpenAI, Anthropic a Google napří
 | GPT-5.6 Luna | OpenAI | rychlý |
 | GPT-5.6 Sol | OpenAI | přemýšlející |
 | Claude Sonnet 5 | Anthropic | rychlý |
-| Claude Opus 4.8 | Anthropic | přemýšlející |
-| Gemini 3.5 Flash | Google | rychlý |
+| Claude Opus 5 | Anthropic | přemýšlející |
+| Claude Fable 5 | Anthropic | vlajkový (třída Mythos) |
+| Gemini 3.6 Flash | Google | rychlý |
 | Gemini 3.1 Pro | Google | přemýšlející |
 | Grok 4.3 | xAI | aktuální (4.5 není dostupný v EU) |
 | Mistral Medium 3.5 | Mistral | evropský |
 | DeepSeek V4 Pro | DeepSeek | čínský, bez obrázků |
 | Kimi K3 | Moonshot AI | čínský |
+| MiniMax M3 | MiniMax | čínský |
+| Nemotron 3 Ultra | NVIDIA | open-source, bez obrázků |
 | GPT-OSS 20B | OpenAI (open-source) | lokální, bez obrázků |
 | Qwen 3.5 9B | Alibaba (open-source) | lokální |
 
