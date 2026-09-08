@@ -32,9 +32,25 @@ Serverless aplikace pro Netlify, žádný trvale běžící server ani build fro
 
 Netlify, propojeno s GitHub repem `miloscermak/promptovac` – push do `main` = automatický deploy. Jediná nutná konfigurace: env proměnná `OPENROUTER_API_KEY` v Netlify UI.
 
+## Aktualizace modelů
+
+Stačí upravit `shared/models.mjs` – frontend i funkce se přizpůsobí samy. **Vždy ale ověř ID proti živému seznamu OpenRouteru**, nikdy je nepiš z hlavy:
+
+```bash
+curl -s https://openrouter.ai/api/v1/models | grep -o '"id":"[^"]*"'
+```
+
+Endpoint je veřejný, klíč nepotřebuje. Vrací i `architecture.input_modalities` (podklad pro `vision`), `context_length` a `pricing`.
+
+Proč to ověřovat:
+
+- OpenRouter modely tiše přejmenovává a odstraňuje (`qwen/qwen3.8-max` → `qwen/qwen3.8-max-0902`). Neplatné ID se projeví až chybou během testu, ne při startu – model prostě vždycky spadne.
+- Při každé aktualizaci proto projeď i **stávající** ID, ne jen nově přidávaná.
+- Varianty s příponou `:batch` do seznamu nepatří – Promptovač streamuje živě.
+- U drahých modelů (~$10/$50 za M tokenů – Fable, GPT-6 Astra) napiš do souboru varovný komentář: cena se v Promptovači násobí počtem modelů × opakování.
+
 ## Konvence
 
-- Při změně modelů stačí upravit `shared/models.mjs` – frontend i funkce se přizpůsobí samy
 - Komentáře v kódu česky
 - Žádné testy ani linter nejsou nastaveny
 - Limit nahraného obrázku: ~6 MB (limit request body Netlify funkcí)
